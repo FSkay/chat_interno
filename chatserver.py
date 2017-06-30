@@ -1,4 +1,4 @@
-#CHAT INTERNO DA TURMA
+#CHAT INTERNO DA TURMA, CURSO 
 
 import socket
 import time
@@ -21,7 +21,7 @@ while not quitting:
             quitting = True
         if addr not in clients:
             clients.append(addr)
-            
+         # Mostra a hora e a data do envio da mensagem  
         print time.ctime(time.time()) + str(addr) + ": :" + str(data)
         for client in clients:
             s.sendto(data, client)
